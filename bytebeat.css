@@ -34,7 +34,7 @@ a:hover {
 }
 
 option {
-	background: #000;
+	background: #000000;
 	font-size: var(--font-size);
 }
 
@@ -587,3 +587,4 @@ button[name="close"] {
 		resize: none;
 	}
 }
+
