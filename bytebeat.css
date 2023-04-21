@@ -9,7 +9,7 @@
 html {
 	color-scheme: dark;
 	background-color: #000;
-	color: #c5c8c6;
+	color: #999;
 	font: var(--font-size) monospace;
 }
 
@@ -18,15 +18,15 @@ body {
 }
 
 a, a:visited {
-	color: #69f;
+	color: #59f;
 }
 
 a:hover {
-	color: #59f !important;
+	color: #99f !important;
 }
 
 :focus-visible {
-	outline: 1px solid #614fdb;
+	outline: 0px solid transparent;
 }
 
 .hidden {
@@ -34,7 +34,7 @@ a:hover {
 }
 
 option {
-	background: white;
+	background: #000;
 	font-size: var(--font-size);
 }
 
@@ -59,18 +59,18 @@ option {
 	max-width: 1028px;
 	width: 100%;
 	margin-top: 0px;
-	overflow-y: auto;
+	overflow-y: center;
 }
 
 #content {
 	display: flex;
-	flex-flow: column;
+	flex-direction: column;
 	align-items: center;
 	height: 100vh;
 }
 
 footer {
-	margin-left: 9px;
+	margin-left: 7px;
 }
 
 /* ==[ Canvas ] =========================================================================================== */
@@ -80,7 +80,7 @@ footer {
 	flex-shrink: 0;
 	position: relative;
 	box-sizing: border-box;
-	border: 5px solid #000;
+	border: 2px solid #222;
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -185,24 +185,24 @@ button[name="close"] {
 
 .cm-matchingBracket, .cm-selectionMatch {
 	margin: -1px;
-	border: 1px solid gray;
-	border-radius: 3px;
+	border: 1px solid #000;
+	border-radius: 0px;
 }
 
 .cm-searchMatch-selected {
-	background-color: #d541ffba !important;
+	background-color: #000 !important;
 }
 
 .cmt-number {
-	color: #a2c7ff;
+	color: #59f;
 }
 
 .cmt-keyword, .cmt-operator {
-	color: #ffbe6c;
+	color: #fff;
 }
 
 .cmt-propertyName {
-	color: #00edff;
+	color: #fff;
 }
 
 .cmt-punctuation, .cmt-variableName {
@@ -210,11 +210,11 @@ button[name="close"] {
 }
 
 .cmt-string {
-	color: #fdf678;
+	color: #fff;
 }
 
 #error {
-	color: #f92672;
+	color: #ff0000;
 	word-break: break-all;
 }
 
@@ -229,7 +229,7 @@ button[name="close"] {
 	margin: 0;
 	padding: 0;
 	border: none;
-	color: #59f;
+	color: #999;
 	background: none;
 	font: var(--font-size)/16px monospace;
 	text-align: left;
@@ -242,7 +242,7 @@ button[name="close"] {
 }
 
 .code-text:hover {
-	color: #b2d1ff !important;
+	color: #999 !important;
 }
 
 .code-button {
@@ -251,7 +251,7 @@ button[name="close"] {
 	border: none;
 	border-radius: 0px;
 	background-image: linear-gradient(to bottom, #000, #000);
-	color: #fff;
+	color: #999;
 	font: var(--font-size)/var(--font-size) monospace;
 	white-space: nowrap;
 	cursor: pointer;
@@ -263,7 +263,7 @@ button[name="close"] {
 }
 
 .code-length, .code-info {
-	color: white;
+	color: #fff;
 	cursor: default;
 }
 
@@ -301,7 +301,7 @@ button[name="close"] {
 }
 
 .entry.star-white::before {
-	color: #999;
+	color: #fff;
 }
 
 .entry.star-yellow::before {
@@ -313,7 +313,7 @@ button[name="close"] {
 }
 
 .entry-top:not(:first-child) {
-	border-top: 1px solid #fff;
+	border-top: 1px solid #000;
 }
 
 .library-content {
@@ -481,7 +481,7 @@ button[name="close"] {
 }
 
 .control-select > option {
-	color: #435071;
+	color: #000;
 }
 
 #control-volume {
@@ -526,7 +526,7 @@ button[name="close"] {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 2px;
-	padding: 3px 0;
+	padding: 0px 0;
 }
 
 .controls-group {
