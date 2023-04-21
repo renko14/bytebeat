@@ -4,9 +4,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Bytebeat player with a collection of many formulas from around the internet">
-	<title>Bytebeat composer</title>
-	<link rel="canonical" href="https://dollchan.net/bytebeat/"/>
+	<meta name="description" content="Bytebeat player and library">
+	<title>Bytebeat</title>
+	<link rel="canonical" href="https://edf-non.github.io/bytebeat/"/>
 	<link rel="shortcut icon" href="favicon.png">
 	<link rel="stylesheet" type="text/css" href="bytebeat.css?version=2023022000">
 	<link rel="modulepreload" href="./scripts/audioProcessor.mjs?version=2023022000">
@@ -16,52 +16,52 @@
 	<main id="content">
 		<section id="container-fixed">
 			<div id="editor-container">
-				<textarea  id="editor-default" spellcheck="false">t*(t&16384?7:5)*(5-(3&t>>8))>>(3&-t>>(t&4096?2:16))|t>>(t&16384?t&4096?3:4:3)</textarea>
+				<textarea  id="editor-default" spellcheck="false">(t&(t>>6)+(t<<((t>>11)^((t>>13)+3))|((t>>14%64)+(t>>14)))&(-t>>5)) //by Paul Hayes</textarea>
 			</div>
 			<div class="controls">
 				<div class="controls-group controls-grow">
-					<button id="control-counter-units" class="control-button" title="Time units">t</button>
+					<button id="control-counter-units" class="control-button" title="unit time">t=</button>
 					<input type="text" id="control-counter" value="0" title="Set time to jump along the timeline then press Enter">
 				</div>
 				<div class="controls-group">
-					<button id="control-stop" class="control-button" title="Stop and reset">
+					<button id="control-stop" class="control-button" title="stop">
 						<svg><use xlink:href="#symbol-stop"></use></svg>
 					</button>
-					<button id="control-reset" class="control-button" title="Reset time to 0">
+					<button id="control-reset" class="control-button" title="reset">
 						<svg><use xlink:href="#symbol-reset"></use></svg>
 					</button>
 				</div>
 				<div class="controls-group">
-					<button id="control-play-backward" class="control-button control-play" title="Play reverse">
+					<button id="control-play-backward" class="control-button control-play" title="play reverse">
 						<span class="control-fast-multiplier">1</span>
 						<svg class="svg-fast"><use xlink:href="#symbol-fast"></use></svg>
 						<svg class="svg-play"><use xlink:href="#symbol-play"></use></svg>
 					</button>
-					<button id="control-pause" class="control-button" title="Pause">
+					<button id="control-pause" class="control-button" title="pause">
 						<svg><use xlink:href="#symbol-pause"></use></svg>
 					</button>
-					<button id="control-play-forward" class="control-button control-play" title="Play forward">
+					<button id="control-play-forward" class="control-button control-play" title="play forward">
 						<span class="control-fast-multiplier">1</span>
 						<svg class="svg-fast"><use xlink:href="#symbol-fast"></use></svg>
 						<svg class="svg-play"><use xlink:href="#symbol-play"></use></svg>
 					</button>
 				</div>
 				<div class="controls-group">
-					<button id="control-scaledown" class="control-button" title="Zoom in the scope">
+					<button id="control-scaledown" class="control-button" title="zoom in">
 						<svg><use xlink:href="#symbol-scaledown"></use></svg>
 					</button>
-					<button id="control-scaleup" class="control-button" title="Zoom out the scope">
+					<button id="control-scaleup" class="control-button" title="zoom out">
 						<svg><use xlink:href="#symbol-scaleup"></use></svg>
 					</button>
 				</div>
-				<select id="control-drawmode" class="control-select controls-grow" title="Drawing mode">
-					<option value="Points" selected>Points</option>
-					<option value="Waveform">Waveform</option>
+				<select id="control-mode" class="control-select controls-grow" title="sound mode">
+					<option value="Bytebeat" selected>bytebeat</option>
+					<option value="Signed Bytebeat">singed bytebeat</option>
+					<option value="Floatbeat">floatbeat</option>
 				</select>
-				<select id="control-mode" class="control-select controls-grow" title="Sound mode">
-					<option value="Bytebeat" selected>Bytebeat</option>
-					<option value="Signed Bytebeat">Signed Bytebeat</option>
-					<option value="Floatbeat">Floatbeat</option>
+				<select id="control-drawmode" class="control-select controls-grow" title="draw mode">
+					<option value="Points" selected>points</option>
+					<option value="Waveform">waveform</option>
 				</select>
 				<div class="controls-group controls-grow">
 					<input type="text" id="control-samplerate" title="Set sample rate (in Hz) then press Enter">
@@ -164,8 +164,7 @@
 				<div id="library-sthephanshi" class="library-container"></div>
 			</details>
 			<footer>
-				<a class="link" href="/btb/" title="Bytebeat discussion threads" target="_blank">&gt;&gt; Discussion threads</a><br>
-				<a class="link" href="https://github.com/SthephanShinkufag/bytebeat-composer" title="Github repo" target="_blank">&gt;&gt; Github</a>
+                <h4 class="title"> Forked of <a href="http://entropedia.co.uk/generative_music/" target="_blank">8-bit Generative Composer</a></h4>
 			</footer>
 		</section>
 	</main>
