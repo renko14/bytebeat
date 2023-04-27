@@ -190,27 +190,27 @@ button[name="close"] {
 }
 
 .cm-searchMatch-selected {
-	background-color: #000 !important;
+	background-color: #111 !important;
 }
 
 .cmt-number {
-	color: #59f;
+	color: #999;
 }
 
 .cmt-keyword, .cmt-operator {
-	color: #fff;
+	color: #999;
 }
 
 .cmt-propertyName {
-	color: #fff;
+	color: #999;
 }
 
 .cmt-punctuation, .cmt-variableName {
-	color: #fff;
+	color: #999;
 }
 
 .cmt-string {
-	color: #fff;
+	color: #999;
 }
 
 #error {
@@ -219,7 +219,7 @@ button[name="close"] {
 }
 
 ::selection {
-	background-color: #000 !important;
+	background-color: #59f !important;
 }
 
 /* ==[ Library ] ========================================================================================== */
@@ -229,7 +229,7 @@ button[name="close"] {
 	margin: 0;
 	padding: 0;
 	border: none;
-	color: #999;
+	color: #d88c87;
 	background: none;
 	font: var(--font-size)/16px monospace;
 	text-align: left;
@@ -242,14 +242,14 @@ button[name="close"] {
 }
 
 .code-text:hover {
-	color: #999 !important;
+	color: #ffb0b0 !important;
 }
 
 .code-button {
 	margin: 1px 0 0 6px;
 	padding: 2px 6px;
 	border: none;
-	border-radius: 0px;
+	border-radius: 3px;
 	background-image: linear-gradient(to bottom, #000, #000);
 	color: #999;
 	font: var(--font-size)/var(--font-size) monospace;
@@ -258,12 +258,12 @@ button[name="close"] {
 }
 
 .code-button:hover {
-	background-image: linear-gradient(to bottom, #000, #000);
-	color: #fff;
+	background-image: linear-gradient(to bottom, #999, #999);
+	color: #000;
 }
 
 .code-length, .code-info {
-	color: #fff;
+	color: #8fce00;
 	cursor: default;
 }
 
@@ -301,11 +301,11 @@ button[name="close"] {
 }
 
 .entry.star-white::before {
-	color: #fff;
+	color: #000;
 }
 
 .entry.star-yellow::before {
-	color: #59f;
+	color: #000;
 }
 
 .entry-top {
