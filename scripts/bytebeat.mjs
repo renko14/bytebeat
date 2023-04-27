@@ -50,7 +50,7 @@ globalThis.bytebeat = new class {
 		this.isPlaying = false;
 		this.isRecording = false;
 		this.playbackSpeed = 1;
-		this.settings = { drawMode: 'Points', drawScale: 5, isSeconds: false, volume: .5 };
+		this.settings = { drawMode: 'Waveform', drawScale: 1, isSeconds: false, volume: .5 };
 		this.songData = { mode: 'Bytebeat', sampleRate: 8000 };
 		this.init();
 	}
@@ -140,8 +140,9 @@ globalThis.bytebeat = new class {
 		}
 		// Drawing in a segment
 		const isWaveform = this.settings.drawMode === 'Waveform';
-		let ch, drawPoint, drawWaveLine;
-		for(let i = 0; i < bufferLen; ++i) {
+		const isDiagram = this.settings.drawMode === 'Diagram';
+		let ch, drawPoint, drawWaveLine, drawDiagram;
+		for (let i = 0; i < bufferLen; ++i) {
 			const curY = buffer[i].value;
 			const prevY = buffer[i - 1]?.value ?? [NaN, NaN];
 			const isNaNCurY = [isNaN(curY[0]), isNaN(curY[1])];
@@ -149,12 +150,13 @@ globalThis.bytebeat = new class {
 			const nextTime = buffer[i + 1]?.t ?? endTime;
 			const curX = this.mod(Math.floor(this.getX(isReverse ? nextTime + 1 : curTime)) - startX, width);
 			const nextX = this.mod(Math.ceil(this.getX(isReverse ? curTime + 1 : nextTime)) - startX, width);
+			const diagramIteration = this.mod(curTime, (2 ** this.settings.drawScale))
 			// Error value - filling with red color
-			if(isNaNCurY[0] || isNaNCurY[1]) {
-				for(let x = curX; x !== nextX; x = this.mod(x + 1, width)) {
-					for(let y = 0; y < height; ++y) {
+			if (isNaNCurY[0] || isNaNCurY[1]) {
+				for (let x = curX; x !== nextX; x = this.mod(x + 1, width)) {
+					for (let y = 0; y < height; ++y) {
 						const idx = (drawWidth * y + x) << 2;
-						if(!data[idx + 1] && !data[idx + 2]) {
+						if (!data[idx + 1] && !data[idx + 2]) {
 							data[idx] = redColor;
 						}
 					}
