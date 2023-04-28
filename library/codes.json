@@ -1,0 +1,104 @@
+[
+  {
+    "author": "edf-non",
+    "children": [
+      {
+        "date": "2023-04-28",
+        "sampleRate": 120022,
+        "codeOriginal": "255<<t/t>>(t>>(t>>6))>>(t>>(t>>6))"
+      },
+      {
+        "url": "https://www.reddit.com/r/bytebeat/comments/12yh8n3/idk/",
+        "date": "2023-04-25",
+        "codeOriginal": "t/(-t>>(t>>16)&127&-t>>7)"
+      },
+      {
+        "description": "buzzing rhythm",
+        "url": "https://www.reddit.com/r/bytebeat/comments/12w03zk/buzzing_rhythm/",
+        "date": "2023-04-23",
+        "codeOriginal": "t/(t%127|t>>4&127&t>>5)"
+      },
+      {
+        "description": "buzzing damage",
+        "url": "https://www.reddit.com/r/bytebeat/comments/12yh8n3/idk/",
+        "date": "2023-04-21",
+        "codeOriginal": "(t*t|t>>9)%256*(1-t%2048/2048))"
+      },
+      {
+        "description": "starlost remade",
+        "remixed": {
+          "description": "starlost",
+          "author": "Glitch Machine",
+          "url": "https://www.greggman.com/downloads/examples/html5bytebeat/html5bytebeat.html#t=0&e=1&s=8000&bb=5d0000010037000000000000000017e07ce6742f92b60556281edd280c7a480eab7695c53fe5f131568feffc61ccaff65a955210eaf30c7048d724fcc4670c20f6a44bfb8b29ffffe7be2000"
+        },
+        "url": "https://www.reddit.com/r/bytebeat/comments/12t3clt/starlost_remade/",
+        "date": "2023-04-20",
+        "codeOriginal": "(t%255^t%511)*3"
+      },
+      {
+        "url": "https://www.reddit.com/r/bytebeat/comments/12iiisu/psychedelic/",
+        "date": "2023-04-11",
+        "codeOriginal": "t/(((t>>16)*t^-t*(t>>16)^(t>>8)>>(t>>16)*t|t>>(t>>16)%7*(t>>16))%(t>>8))>>3"
+      },
+      {
+        "description": "remix of 216",
+        "remixed": {
+          "author": 216,
+          "url": "https://youtu.be/tCRPUv8V22o?t=345"
+        },
+        "url": "https://www.reddit.com/r/bytebeat/comments/12mbdjn/remix_of_216/",
+        "date": "2023-04-14",
+        "codeOriginal": "(t*(t^t+1^(t-1280^t)>>(10+(t>>16)))"
+      },
+      {
+        "description": "harmonic psychedelica",
+        "url": "https://www.reddit.com/r/bytebeat/comments/116erq4/harmonic_psychedelica/",
+        "date": "2023-02-19",
+        "codeOriginal": "t>>12&t+t%127-t+t%1002&t>>5+127*t+t^t%16+t&t%1002"
+      },
+      {
+        "date": "2023-02-16",
+        "codeOriginal": "t>>t/(4+(t>>15)%16)*(1+(3&t>>13))>>(2&t>>11)"
+      },
+      {
+        "url": "https://www.reddit.com/r/bytebeat/comments/1293kdv/source/",
+        "date": "2023-02",
+        "codeOriginal": "t/(t%127^t%128)+(t%126/t%129)"
+      },
+      {
+        "description": "wave test",
+        "url": "https://www.reddit.com/r/bytebeat/comments/1293kdv/source/",
+        "date": "2022-10-16",
+        "sampleRate": 44100,
+        "codeOriginal": "t/(t-t|t%1024)+t/127"
+      },
+      {
+        "url": "https://www.reddit.com/r/bytebeat/comments/y5aghd/thing/",
+        "date": "2022-10-16",
+        "codeOriginal": "(t&4096?t>>3|t>>t*(t>>16):(t*t>>5)|t>>4|t>>4)+(t&4096?t*t>>9|t>>3:t&t>>12)"
+      },
+      {
+        "description": "going",
+        "url": "https://www.reddit.com/r/bytebeat/comments/xq50l9/going/",
+        "date": "2022-09-27",
+        "sampleRate": 32000,
+        "codeOriginal": "(s=(m=t*t>>12,a=t^-(t^(127%t*t>>7)^t),m|a|(x=(t^-a*cos))^x|m-a&127),s&(v=a&m,x/s-x))+t&s"
+      },
+      {
+        "description": "wrinkle rhythm",
+        "date": "2022-09-09",
+        "codeOriginal": "t>>(t+(t>>7)^(t&t>>6))"
+      },
+      {
+        "url": "https://www.reddit.com/r/bytebeat/comments/x6oovr/puzzle/",
+        "date": "2022-09-05",
+        "codeOriginal": "((t>>8&12)*t)+(-t*6^(t>>7))"
+      },
+      {
+        "url": "https://www.reddit.com/r/bytebeat/comments/wfwgfh/waves/",
+        "date": "2022-08-04",
+        "codeOriginal": "t*(t>>6)%(t>>6|t>>12)"
+      }
+    ]
+  }
+]
