@@ -263,12 +263,12 @@ button[name="close"] {
 }
 
 .code-length, .code-info {
-	color: #8fce00;
+	color: #555;
 	cursor: default;
 }
 
 .code-stereo {
-	color: #fefe85;
+	color: #1fff00;
 }
 
 .entry {
@@ -313,7 +313,7 @@ button[name="close"] {
 }
 
 .entry-top:not(:first-child) {
-	border-top: 1px solid #000;
+	border-top: 1px solid #999;
 }
 
 .library-content {
