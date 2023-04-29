@@ -3,6 +3,16 @@
     "author": "edf-non",
     "children": [
       {
+        "description": "glitch hrmodem",
+        "date": "2023-04-29",
+        "codeOriginal": "(t-((t>>8)-t^(t^100|t^31|t>>8)*(t>>11))-(-t>>8&12))&(t>>5|63)"
+      },
+      {
+        "description": "DUP",
+        "date": "2023-04-28",
+        "codeOriginal": "(-t&t>>(t>>16)&t>>12)-1&-(t>>2&t>>4)"
+      },
+      {
         "date": "2023-04-28",
         "sampleRate": 120022,
         "codeOriginal": "255<<t/t>>(t>>(t>>6))>>(t>>(t>>6))"
@@ -22,7 +32,7 @@
         "description": "buzzing damage",
         "url": "https://www.reddit.com/r/bytebeat/comments/12yh8n3/idk/",
         "date": "2023-04-21",
-        "codeOriginal": "(t*t|t>>9)%256*(1-t%2048/2048))"
+        "codeOriginal": "(t*t|t>>9)%256*(1-t%2048/2048)"
       },
       {
         "description": "starlost remade",
@@ -48,7 +58,7 @@
         },
         "url": "https://www.reddit.com/r/bytebeat/comments/12mbdjn/remix_of_216/",
         "date": "2023-04-14",
-        "codeOriginal": "(t*(t^t+1^(t-1280^t)>>(10+(t>>16)))"
+        "codeOriginal": "(t*(t^t+1^(t-1280^t)>>(10+(t>>16))))"
       },
       {
         "description": "harmonic psychedelica",
@@ -58,6 +68,7 @@
       },
       {
         "date": "2023-02-16",
+        "sampleRate": 32000,
         "codeOriginal": "t>>t/(4+(t>>15)%16)*(1+(3&t>>13))>>(2&t>>11)"
       },
       {
@@ -100,5 +111,91 @@
         "codeOriginal": "t*(t>>6)%(t>>6|t>>12)"
       }
     ]
+  },
+  {
+    "description": "Very largest sample rate (from 1966440448 to infinity)",
+    "children": [
+      {
+        "remixed": {
+          "description": "Sin() isn't kosher, people!",
+          "author": "viznut",
+          "codeOriginal": "10*(t>>6|t|t>>(t>>16))+(7&t>>11)"
+        },
+        "sampleRate": 4283105280000,
+        "codeOriginal": "t/=535388160,10*(t>>6|t|t>>(t>>16))+(7&t>>11)"
+      },
+      {
+        "description": "1e+81 maximum rate to break",
+        "sampleRate": 1e+81,
+        "codeOriginal": "t //1e+81 sampleRate"
+      }
+    ]
+  },
+  {
+    "author": "Zackx/ItsZack7391",
+    "children": [
+      {
+        "description": "multi channel with function",
+        "url": "https://www.reddit.com/r/bytebeat/comments/132jujn/multi_channel_with_function/",
+        "mode": "Floatbeat",
+        "sampleRate": 32000,
+        "codeOriginal": "e=x=>t*2**((x-4.35)/12),s=(a,b,c)=>((a&128)/2*((~t>>5<<(1&t>>15)&255)/96)+(b&32)*3+(c%128)),s(e([0,12,0,12,-7,5,-5,7][7&t>>13]),e([0,2,4,5,7,7,12,12,10,7,5,7,9,5,9,5][15&t>>12]),e([0,4,7,12,16,19,24,28][7&t>>17]))/320-.5+sin(3e3/(t%16384+3e3)**.3)/3+sin(t**3)/8*((-t>>[6,5,4,5][3&t>>15]&255)/256)"
+      },
+      {
+        "description": "MEGA-XINSIDE CASTLE",
+        "url": "https://www.reddit.com/r/bytebeat/comments/131ny7o/megaxinside_castle/",
+        "sampleRate": 44100,
+        "codeOriginal": "s=(a,v)=>{const kick=sin(cbrt(a/80)*v); const snare = random()*(-a>>8&31); return kick*16+snare},z=(m,o)=>{const chip = (sin(t>>3)*t&255)*(-t>>m&o)/128/32;return chip},\ns(t%16384,32)+16+z(9,[0,31][t>>14&1])*32+(a=t=>(p=[2,4,5,9,2,4,5,9,2,4,5,9,12,9,7,5,0,2,4,7,0,2,4,7,0,2,4,7,0,2,4,0,-2,0,2,5,-2,0,2,5,-2,0,2,5,-2,0,2,-2,-3,-1,1,4,-3,-1,1,4,-3,-1,1,7,-3,-1,1,9][(t>>13)%64],z=t*2**(p/12)*3.2,(z&128)/1.5)*(1-t%8192/12E3),a(t)+a(t-12168)/2+a(t-24336)/4+a(t-36504)/8+a(t-48672)/16)/1.5+(32&t*2**([0,0,0,3,-2,-2,-2,-2,-4,-4,-4,-4,-5,-5,-5,-1][15&t>>15]/12)/8.92)*(t&8192?1:0)"
+      },
+      {
+        "description": "some car sport theme",
+        "url": "https://www.reddit.com/r/bytebeat/comments/130f4m6/next_will_add_song_here_part_3/",
+        "sampleRate": 44100,
+        "codeOriginal": "r=t/1.3,p=t*'1121122112121222'[15&r>>12]/2.22*2**([0,0,-7,-4,0,0,3,5][7&r>>16]/12),148-((1.003*p%256+.997*p%256)/3*(-p*2&256)>>9)+((sin(3e3/(r%16384+512)**.01))*64)*(r&8192?0:1)"
+      },
+      {
+        "description": "I'm lazy to make some cool song",
+        "url": "https://www.reddit.com/r/bytebeat/comments/12zclln/im_lazy_to_make_some_cool_song/",
+        "sampleRate": 32000,
+        "codeOriginal": "(((t*((7&t>>11)-1)^(127&t>>7))>>(3&t>>10>>(1&t>>15))*((3&t>>15)+2)/2)&255)/2+((t*sin(t>>2)&255)>>7)*(~t>>7&127)*(t&16384?1:0)"
+      },
+      {
+        "description": "FM bongo",
+        "url": "https://www.reddit.com/r/bytebeat/comments/12xe08r/bongo_nonjs/",
+        "mode": "Floatbeat",
+        "sampleRate": 32000,
+        "codeOriginal": "p=t*PI/(128*(t&131072?~t&65536?3/2:4/3:1)>>1*(1&t>>13)),d=((~t>>5<<(1&t>>15)&255)>>3)/32\n,sin(p+sin(p/2)*d*2+sin(p*8)*d)*(1-t*(t&32768?2:1)%8192/12e3)"
+      },
+      {
+        "description": "a remix of \"PARTY!\"",
+        "url": "https://www.reddit.com/r/bytebeat/comments/12r8v3k/list_of_my_creationremixes/",
+        "sampleRate": 37500,
+        "codeOriginal": "t/=4,b=w=>t*2**([0,2,4,4,0,2,-3,-3][7&t>>14]/12)*1.05%w/2,((((t+t%[1,3,5,2][(t/3>>10)&3])*2**([0,1,3,5,7,8][(t>>10)%6]/12)<<((t>>[10,11][t/3>>10&1])*1.25&3)>>1&63)-(t>>10&31|1)|t>>2)&255)/2.5+b(127)+b(128)"
+      },
+      {
+        "description": "STAY",
+        "url": "https://www.reddit.com/r/bytebeat/comments/12r8v3k/list_of_my_creationremixes/",
+        "sampleRate": 48000,
+        "codeOriginal": "r=8192,a=t=>(p=t/1.36*2**([-19,-1,0,7,,,0,,-17,,-1,0,,,-5,,-15,-1,0,7,,,0,,-20,,-1,0,,,-5,-3][(t>>13)%32]/12),(((p&127)+16)&128)*(1-t%r/r)),a(t)+a(t-r*2)/4+a(t-r*4)/6+a(t-r*8)/12+a(t-r*16)/24"
+      },
+      {
+        "description": "Melody XOR breakcore",
+        "url": "https://www.reddit.com/r/bytebeat/comments/12r8v3k/list_of_my_creationremixes/",
+        "sampleRate": 48000,
+        "codeOriginal": "p=t/2**(('08753875'[7&t>>16])/12),(p*1.38^p*1.39>>(-t>>12&3)<<(t>>15&3))%256/3+((3e2**(t*[[1,,,4,,4,4,8,4],[1,,,4,,4,8,16]][!(~t>>16&1)|0][7&t>>13]%32768)**.04)&128)/2+(random()*(-t&4095)/150)+((t*sin(t>>2)&255)*(-t&8191)/24e3)*'00100101'[7&t>>13]"
+      },
+      {
+        "description": "TADA!!!! this song called \"Morning day\"",
+        "url": "https://www.reddit.com/r/bytebeat/comments/12sl3rv/i_made_perfectly_song_with_2_songs/",
+        "sampleRate": 48000,
+        "stereo": true,
+        "codeOriginal": "r=12288,e=x=>t*2**((x+.75)/12),a=t=>(e(([0,2,4,5,7,9,11,14,0,2,4,5,7,9,11,16,-3,4,7,9,12,14,12,16,-3,4,7,9,12,14,12,19][(t>>13)%32]+12))&256)*(1-t%8192/16e3)/6,g=(((3e2**(t*[1,,,4,,4,4,8,1,,,4,,4,8,16][15&t>>13]%32768)**.04)&128)/2.75+(random()*(-t&4095)/150)*(t>524288)+((t*sin(t>>2)&255)*(-t&8191)/32e3)*'00100101'[7&t>>13])*(t>262144),b=((127&e([0,0,0,2,-3,-3,-3,4][7&t>>15])/8)+(sin(t/2e4)*16+64)&128)/3*(t>1048576),\n[a(t)+a(t-r)/2+a(t-r*2)/8+a(t-r*3)/6+a(t-r*4)/12+a(t-r*5)/12+g+b,a(t)+a(t-r)/4+a(t-r*2)/6+a(t-r*3)/8+a(t-r*4)/8+a(t-r*5)/24+g+b]"
+      }
+    ]
+  },
+  {
+    "author": "Cool_ObbyDeveloper",
+    "url": "https://www.reddit.com/r/bytebeat/comments/120lr7l/t/",
+    "codeOriginal": "t*((t>>12|t>>9)&241&t>>4)"
   }
 ]
