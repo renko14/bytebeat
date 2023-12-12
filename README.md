@@ -3,6 +3,6 @@ Bytebeat music (or one-liner music) was invented in September 2011. They're gene
 
 Live editing algorithmic music generator with a collection of many formulas from around the internet.
 
-# **Player and library: https://edf-non.github.io/bytebeat/**<br>
+# **Player and library: https://pedurenko.github.io/bytebeat/ https://pedurenko.github.io/bytebeat-1/**<br>
 
 ![image](https://user-images.githubusercontent.com/108082792/235698060-c733132b-7116-418e-83e3-64df7d08538e.png)
